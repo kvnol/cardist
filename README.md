@@ -6,7 +6,7 @@
 
 * [x] Clean layout
 * [x] Responsive layout
-* [x] Preprocessor SASS
+* [ ] Preprocessor SASS
 * [x] HTML minified
 * [ ] CSS minified
 * [x] No JavaScript
