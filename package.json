@@ -1,0 +1,26 @@
+{
+  "name": "cardist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp && bundle exec jekyll serve --incremental",
+    "build": "gulp && bundle exec jekyll build",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvnol/cardist.git"
+  },
+  "author": "@kvnol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kvnol/cardist/issues"
+  },
+  "homepage": "https://github.com/kvnol/cardist#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "gulp-concat": "^2.6.1",
+    "normalize.css": "^7.0.0"
+  }
+}

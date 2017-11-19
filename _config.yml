@@ -1,0 +1,22 @@
+# Card settings
+title: Kevin Oliveira
+description:
+photo: 
+baseurl: ""
+url: ""
+
+# Build
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - gulpfile.js
+  - package.json
+  - README.md
+  - LICENSE

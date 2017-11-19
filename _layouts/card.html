@@ -1,0 +1,39 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/vendor.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta property="twitter:image:src" content="{{ site.photo }}">
+
+  <!-- Social: Facebok / Open Graph -->
+  <meta property="fb:admins" content="{{ site.og-admin }}" />
+  <meta property="og:url" content="{{ page.url }}">
+  <meta property="og:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}">
+  <meta property="og:image" content="{{ site.photo }}">
+  <meta property="og:description" content="{{ page.description }}">
+
+</head>
+<body class="{{ page.slug }}">
+  {% include header.html %}
+  <main class="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>
