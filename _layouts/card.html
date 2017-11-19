@@ -17,23 +17,39 @@ layout: compress
   <!-- Social: Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="{{ site.twitter }}">
-  <meta name="twitter:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{{ site.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
   <meta property="twitter:image:src" content="{{ site.photo }}">
 
   <!-- Social: Facebok / Open Graph -->
   <meta property="fb:admins" content="{{ site.og-admin }}" />
   <meta property="og:url" content="{{ page.url }}">
-  <meta property="og:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}">
+  <meta property="og:title" content="{{ site.title }}">
   <meta property="og:image" content="{{ site.photo }}">
   <meta property="og:description" content="{{ page.description }}">
 
 </head>
 <body class="{{ page.slug }}">
-  {% include header.html %}
-  <main class="main">
-    {{ content }}
+  <main class="card" role="main">
+    <header class="card-header" role="banner">
+      <figure class="card-cover">
+        <img class="card-cover_img" src="{{ site.cover }}" alt="">
+      </figure>
+
+      <article class="card-info" itemscope itemtype="http://schema.org/Person">
+        <figure class="card-avatar">
+          <img class="card-avatar_img" itemprop="image" src="{{ site.photo }}" alt="{{ site.title }} photo">
+        </figure>
+        <h1 class="card-title" itemprop="name">{{ site.title }}</h1>
+        <p class="card-description">{{ site.description }}</p>
+      </article>
+
+      <nav class="card-social" role="navigation">
+        <a class="card-social_item" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer" title="@{{ site.github }} on Github"><img class="card-social_icon" src="/assets/img/github-icon.svg" alt="Github icon"></a>
+        <a class="card-social_item" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener noreferrer" title="@{{ site.twitter }} on Twitter"><img class="card-social_icon" src="/assets/img/twitter-icon.svg" alt="Twitter icon"></a>
+        <a class="card-social_item" href="https://medium.com/@{{ site.medium }}" target="_blank" rel="noopener noreferrer" title="@{{ site.medium }} on Medium"><img class="card-social_icon" src="/assets/img/medium-icon.svg" alt="Github icon"></a>
+      </nav>
+    </header>
   </main>
-  {% include footer.html %}
 </body>
 </html>

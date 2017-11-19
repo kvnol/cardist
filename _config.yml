@@ -1,9 +1,17 @@
 # Card settings
 title: Kevin Oliveira
-description:
-photo: 
+description: "Front-end at Insane, previously at LojasIncor. Creator of Devnspiration and designer at Front-End Brasil community."
+photo: "/assets/img/avatar.png" # 180x180px
+cover: "https://dncache-mauganscorp.netdna-ssl.com/thumbseg/610/610453-bigthumbnail.jpg"  # 450x330px
+background: "https://www-tc.pbs.org/wnet/nature/files/2013/06/himalayas-mez.jpg" # 1920x1080px
+
+github: "kvnol"
+twitter: "kvnol"
+medium: "kvnol"
+
 baseurl: ""
 url: ""
+
 
 # Build
 markdown: kramdown

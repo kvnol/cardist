@@ -10,9 +10,6 @@ const files = {
 gulp.task('css', () =>
   gulp.src(files.cssVendor)
     .pipe(concat('vendor.css'))
-    .pipe(clean({
-      compatibility: 'ie9'
-    }))
     .pipe(gulp.dest('assets/css'))
 );
 
